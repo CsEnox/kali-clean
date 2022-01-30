@@ -34,6 +34,13 @@ cp .config/rofi/config ~/.config/rofi/config
 cp .fehbg ~/.fehbg
 cp .config/i3/clipboard_fix.sh ~/.config/i3/clipboard_fix.sh
 
+# Retina Display - DPI Fix
+echo 'Xft.dpi: 172' > ~/.Xresources
+echo '[ -r /home/kali/.config/kali-HiDPI/xsession-settings ] && . /home/kali/.config/kali-HiDPI/xsession-settings
+xrandr --dpi 172
+export XCURSOR_SIZE=48' > ~/.xsessionrc
+
+
 echo "Done! Grab some wallpaper and run pywal -i filename to set your color scheme. To have the wallpaper set on every boot edit ~.fehbg"
 echo "After reboot: Select i3 on login, run lxappearance and select arc-dark"
 
